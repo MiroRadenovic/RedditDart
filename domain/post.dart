@@ -6,6 +6,9 @@ class Post{
   String description;
   String imageUrl;
   List<PostComment> comments;
+  
+  Post(this.title,this.description,this.imageUrl, {this.comments});
+
 }
 
 class PostComment{

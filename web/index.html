@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
   <head>
     <title>index</title>
   </head>
  
-  <body>   
-    <p id="text"></p>
+  <body ng-cloak>   
+  <div post>
+  <ul>
+  <li ng-repeat="post in postController.posts">{{post.title}}</li>
+  </ul>
+  </div>
+    
+    
+    
     <script type="application/dart" src="main.dart"></script>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>
