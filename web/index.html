@@ -5,15 +5,18 @@
     <title>index</title>
   </head>
  
-  <body ng-cloak>   
+  <body class="ng-cloak">
+    
   <div post>
-  <ul>
-  <li ng-repeat="post in postController.posts">{{post.title}}</li>
-  </ul>
+
+  <div ng-repeat="post in postController.posts">
+    <h3>{{post.title}}</h3>
+    <span>{{post.description}}</span><br />
+    <img alt="{{post.title}}" src="{{post.imageUrl}}" />
   </div>
-    
-    
-    
+
+  </div>
+
     <script type="application/dart" src="main.dart"></script>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>

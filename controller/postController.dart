@@ -16,8 +16,8 @@ class PostController{
   
   _loadPosts() {
     return [
-            new Post('title1', 'desc', 'https://www.dartlang.org/imgs/dart-sprite.png'),
-            new Post('title1', 'desc', 'https://www.dartlang.org/imgs/dart-sprite.png')
+            new Post('title1', 'desc', 'http://lorempixel.com/400/200/'),
+            new Post('title1', 'desc', 'http://lorempixel.com/400/200/')
            ];
     }
   }
