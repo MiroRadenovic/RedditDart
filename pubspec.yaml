@@ -1,0 +1,5 @@
+name: RedditDart
+description: reddit on dart
+dependencies:
+  angular: any
+  browser: any
