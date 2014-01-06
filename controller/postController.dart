@@ -15,6 +15,15 @@ class PostController{
     posts = _loadPosts();
   }
   
+  
+  voteUp(Post post){
+    post.score++;
+  }
+  
+  voteDown(Post post){
+    post.score--;
+  }
+  
   _loadPosts() {
     return [
             new Post('new greeat image', 'this is short desc', 'http://lorempixel.com/400/200/'),

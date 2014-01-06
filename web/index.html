@@ -27,13 +27,13 @@
      <div class="holder_content" ng-if="postController.selectedPost == null">
         <section class="group1" ng-repeat="post in postController.posts">
         <span class="postInfo">
-           <h3 >{{post.title}}</h3>
+           <h3>{{post.title}} - score: {{post.score}}</h3>
            <p> {{post.description}}</p>
         </span> 
         <span class="postVote">
           <div class="voting">
-              <div class="upvote">up</div>
-              <div class="downvote">down</div>
+              <div class="upvote" ng-click="postController.voteUp(post)">up</div>
+              <div class="downvote" ng-click="postController.voteDown(post)">down</div>
           </div>
         </span>
           <a class="photo_hover3" ng-click="postController.selectedPost = post">
