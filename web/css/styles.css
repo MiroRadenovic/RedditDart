@@ -415,3 +415,32 @@ nav ul li a.current {
 	position: relative;
 	top: 1px;
 }
+
+/***************************************************
+				 Voting
+***************************************************/
+
+
+.voting{
+   width:30px;
+   height:40px;
+}
+.upvote{
+   width:30px;
+   height: 20px;
+   cursor: pointer;
+}
+.downvote{
+   width:30px;
+   height: 20px;
+   background: url('images/downvote.jpg') 0 0 no-repeat;
+   cursor: pointer;
+}
+
+.postVote{
+  float: right;
+}
+
+.postInfo{
+  float:left;
+}

@@ -16,8 +16,8 @@ class PostController{
   
   _loadPosts() {
     return [
-            new Post('title1', 'desc', 'http://lorempixel.com/400/200/'),
-            new Post('title1', 'desc', 'http://lorempixel.com/400/200/')
+            new Post('new greeat image', 'this is short desc', 'http://lorempixel.com/400/200/'),
+            new Post('a normal image to display', 'this is a very very very long desc', 'http://lorempixel.com/400/200/')
            ];
     }
   }

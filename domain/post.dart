@@ -6,8 +6,11 @@ class Post{
   String description;
   String imageUrl;
   List<PostComment> comments;
+  int score;
   
-  Post(this.title,this.description,this.imageUrl, {this.comments});
+  Post(this.title,this.description,this.imageUrl, {this.comments}){
+    score = 0;
+  }
 
 }
 

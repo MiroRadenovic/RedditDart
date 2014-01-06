@@ -25,9 +25,17 @@
    <!--start using the post controller-->
    <div post class="holder_content">
       <section class="group1" ng-repeat="post in postController.posts">
+      <span class="postInfo">
          <h3>{{post.title}}</h3>
          <p>{{post.description}}</p>
-         <a class="photo_hover3" href="#"><img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/></a> 
+      </span> 
+      <span class="postVote">
+        <div class="voting">
+            <div class="upvote">up</div>
+            <div class="downvote">down</div>
+        </div>
+      </span>
+      <a class="photo_hover3" href="#"><img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/></a>
        </section>
 	</div>
    </div>
