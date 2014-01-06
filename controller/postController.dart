@@ -7,8 +7,9 @@ import '../domain/post.dart';
     selector: '[post]',  // defines the tag used in the views
     publishAs: 'postController') // the name of the controller when accessing from html views
 class PostController{
-  Post currentPost;
+  Post selectedPost;
   List<Post> posts;
+  
   
   PostController(){
     posts = _loadPosts();

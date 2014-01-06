@@ -23,21 +23,32 @@
       </hgroup>
    </section>
    <!--start using the post controller-->
-   <div post class="holder_content">
-      <section class="group1" ng-repeat="post in postController.posts">
-      <span class="postInfo">
-         <h3>{{post.title}}</h3>
-         <p>{{post.description}}</p>
-      </span> 
-      <span class="postVote">
-        <div class="voting">
-            <div class="upvote">up</div>
-            <div class="downvote">down</div>
-        </div>
-      </span>
-      <a class="photo_hover3" href="#"><img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/></a>
-       </section>
-	</div>
+   <div post>
+     <div class="holder_content" ng-if="postController.selectedPost == null">
+        <section class="group1" ng-repeat="post in postController.posts">
+        <span class="postInfo">
+           <h3 >{{post.title}}</h3>
+           <p> {{post.description}}</p>
+        </span> 
+        <span class="postVote">
+          <div class="voting">
+              <div class="upvote">up</div>
+              <div class="downvote">down</div>
+          </div>
+        </span>
+          <a class="photo_hover3" ng-click="postController.selectedPost = post">
+            <img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/>
+          </a>
+        </section>
+  	</div>
+    <div class="detail" ng-if="postController.selectedPost != null">
+      <h3 >{{postController.selectedPost.title}}</h3>
+       <p>{{postController.selectedPost.description}}</p>
+       <img src="{{postController.selectedPost.imageUrl}}" alt="{{postController.selectedPost.title}}"/>
+       <br />
+       <a ng-click="postController.selectedPost = null"> go back </a>
+    </div>
+    </div>
    </div>
    <footer />
    </div>
