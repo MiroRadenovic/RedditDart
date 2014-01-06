@@ -1,23 +1,62 @@
-<!DOCTYPE html>
-
-<html ng-app>
-  <head>
-    <title>index</title>
-  </head>
- 
-  <body class="ng-cloak">
-    
-  <div post>
-
-  <div ng-repeat="post in postController.posts">
-    <h3>{{post.title}}</h3>
-    <span>{{post.description}}</span><br />
-    <img alt="{{post.title}}" src="{{post.imageUrl}}" />
-  </div>
-
-  </div>
-
-    <script type="application/dart" src="main.dart"></script>
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Minimalism - Home</title>
+<link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
+ <!--[if lt IE 9]>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body class="ng-cloak">
+   <div class="bg">
+    <!--start container-->
+    <div id="container">
+    <!--start header-->
+    <header>
+      <!--start logo-->
+      <a href="#" id="logo"><img src="http://siliconangle.com/files/2011/10/dart-logo.png" alt="logo"/></a>    
+      <!--end logo-->
+      <!--start menu-->
+  	   <nav>
+         <ul>
+         <li><a href="#" class="current">Home</a></li>
+         </ul>
+      </nav>
+  	   <!--end menu-->
+      <!--end header-->
+	</header>
+   <!--start intro-->
+   <section id="intro">
+      <hgroup>
+      <h1>"Reddit implemented in Angular Dart"</h1>
+      <h2>implementation in dart of reddit using angular dart</h2>
+      </hgroup>
+   </section>
+   <!--end intro-->
+   <!--start holder-->
+   <div post class="holder_content">
+      <section class="group1" ng-repeat="post in postController.posts">
+         <h3>{{post.title}}</h3>
+         <p>{{post.description}}</p>
+         <a class="photo_hover3" href="#"><img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/></a> 
+       </section>
+	</div>
+	<!--end holder-->
+   <!--start holder-->
+   <!--end holder-->
+   </div>
+   <!--end container-->
+   <!--start footer-->
+   <footer>
+      <div class="container">  
+        
+      </div>
+   </footer>
+   <!--end footer-->
+   </div>
+     <script type="application/dart" src="main.dart"></script>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>
   </body>
