@@ -15,13 +15,16 @@ class PostController{
     posts = _loadPosts();
   }
   
-  
   voteUp(Post post){
     post.score++;
   }
   
   voteDown(Post post){
     post.score--;
+  }
+  
+  addPost(Post post){
+    posts.add(post);
   }
   
   _loadPosts() {
