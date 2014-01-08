@@ -27,6 +27,10 @@ class PostController{
     posts.add(post);
   }
   
+  addSample(){
+    addPost( new Post('SAMPLEEEE', 'this is short desc', 'http://lorempixel.com/400/200/'));
+  }
+  
   _loadPosts() {
     return [
             new Post('new greeat image', 'this is short desc', 'http://lorempixel.com/400/200/'),

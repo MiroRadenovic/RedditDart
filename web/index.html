@@ -23,11 +23,13 @@
       </hgroup>
    </section>
    
-     <new-post-component>
-     </new-post-component>
+ 
    <!--start using the post controller-->
-   <div post>
-   
+   <div post>f
+     <new-post-component post-controller="postController">
+     </new-post-component>
+     <hr />
+     <input type="button" ng-click="postController.addSample()" type="submit" value="add sample">
      <div class="holder_content" ng-if="postController.selectedPost == null">
         <section class="group1" ng-repeat="post in postController.posts">
         <span class="postInfo">
