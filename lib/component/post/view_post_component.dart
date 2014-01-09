@@ -17,4 +17,15 @@ class ViewPostComponent{
   }
   
   Post selectedPost;
+  String newMessage;
+  
+  addComment() {
+    selectedPost.comments.add(new PostComment(newMessage,  new DateTime.now()));
+    newMessage = '';
+  } 
+  
+  
+  raiseEvent(){
+    print('event');
+  }
 }

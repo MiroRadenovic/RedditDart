@@ -3,8 +3,22 @@
        <p>{{ctrl.selectedPost.description}}</p>
        <img src="{{ctrl.selectedPost.imageUrl}}" alt="{{ctrl.selectedPost.title}}"/>
        <br />
-       Comments:
+       <div ng-if="ctrl.selectedPost.comments.length != 0">
+         Comments:
+         <ul>
+          <li ng-repeat="comment in ctrl.selectedPost.comments">{{comment.text}}  @ {{comment.time}}</li>
+         </ul>
+       </div>
+        <h2 ng-if="ctrl.selectedPost.comments.length == 0">
+        No comments
+        </h2>
+        
+        <div>
+          Insert new comment<br />
+          <input type="text" placeholder="Insert a new comment" ng-model="ctrl.newMessage" />
+          <input type="button" ng-click="ctrl.addComment()" value="Add comment" />
+        </div>
        
+       <a ng-click="ctrl.raiseEvent()">debugme </a> <br />
        <a ng-click="ctrl.selectedPost = null"> go back </a>
-       
  </div>

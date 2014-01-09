@@ -10,12 +10,14 @@ class Post{
   
   Post(this.title,this.description,this.imageUrl, {this.comments}){
     score = 0;
+    if(this.comments == null) this.comments = new List<PostComment>();
   }
 
 }
 
 class PostComment{
-  Post post;
-  String Text;
+  String text;
   DateTime time;
+  
+  PostComment(this.text, this.time);
 }
