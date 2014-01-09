@@ -12,10 +12,7 @@ import '../../domain/post.dart';
     }
 )
 class ViewPostComponent{
-  ViewPostComponent(){
-    
-  }
-  
+
   Post selectedPost;
   String newMessage;
   
@@ -23,9 +20,4 @@ class ViewPostComponent{
     selectedPost.comments.add(new PostComment(newMessage,  new DateTime.now()));
     newMessage = '';
   } 
-  
-  
-  raiseEvent(){
-    print('event');
-  }
 }
