@@ -1,0 +1,10 @@
+ <div class="detail" ng-if="ctrl.selectedPost != null">
+      <h3 >{{ctrl.selectedPost.title}}</h3>
+       <p>{{ctrl.selectedPost.description}}</p>
+       <img src="{{ctrl.selectedPost.imageUrl}}" alt="{{ctrl.selectedPost.title}}"/>
+       <br />
+       Comments:
+       
+       <a ng-click="ctrl.selectedPost = null"> go back </a>
+       
+ </div>

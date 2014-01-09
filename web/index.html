@@ -25,11 +25,12 @@
    
  
    <!--start using the post controller-->
-   <div post>f
-     <new-post-component post-controller="postController">
-     </new-post-component>
-     <hr />
-     <input type="button" ng-click="postController.addSample()" type="submit" value="add sample">
+   <div post>
+     <manage-post-component ng-if="postController.selectedPost == null" post-controller="postController" edit-post="postController.selectedPost">
+     </manage-post-component>
+     <view-post-component selected-post="postController.selectedPost">
+    </view-post-component>
+    
      <div class="holder_content" ng-if="postController.selectedPost == null">
         <section class="group1" ng-repeat="post in postController.posts">
         <span class="postInfo">
@@ -47,13 +48,7 @@
           </a>
         </section>
   	</div>
-    <div class="detail" ng-if="postController.selectedPost != null">
-      <h3 >{{postController.selectedPost.title}}</h3>
-       <p>{{postController.selectedPost.description}}</p>
-       <img src="{{postController.selectedPost.imageUrl}}" alt="{{postController.selectedPost.title}}"/>
-       <br />
-       <a ng-click="postController.selectedPost = null"> go back </a>
-    </div>
+    
     </div>
    </div>
    <footer />

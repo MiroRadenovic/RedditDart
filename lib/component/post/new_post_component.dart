@@ -5,11 +5,12 @@ import '../../controller/postController.dart';
 import '../../domain/post.dart';
 
 @NgComponent(
-    selector: 'new-post-component',
+    selector: 'manage-post-component',
     templateUrl: 'packages/RedditDart/component/post/new_post_component.html',
     publishAs: 'ctrl',
     map: const {
-      'post-controller':'<=>postController'
+      'post-controller':'<=>postController',
+      'edit-post':'<=>editPost'
     }
 )
 class NewPostComponent{
@@ -18,11 +19,16 @@ class NewPostComponent{
   String imageUrl;
   
   PostController postController; 
-  Scope _scope;
-  
-  NewPostComponent();
-  
+  Post editPost;
+
   void addIt(){
     postController.addPost(new Post(title,description,imageUrl));
+    clear();
+  }
+  
+  clear(){
+    title = ''; 
+    description = '';
+    imageUrl = '';
   }
 }
