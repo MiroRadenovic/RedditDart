@@ -3,6 +3,11 @@
        <p>{{ctrl.selectedPost.description}}</p>
        <img src="{{ctrl.selectedPost.imageUrl}}" alt="{{ctrl.selectedPost.title}}"/>
        <br />
+          <div>
+          Insert new comment<br />
+          <input type="text" placeholder="Insert a new comment" ng-model="ctrl.newMessage" />
+          <input type="button" ng-click="ctrl.addComment()" value="Add comment" />
+        </div>
        <div ng-if="ctrl.selectedPost.comments.length != 0">
          Comments:
          <ul>
@@ -10,12 +15,8 @@
          </ul>
        </div>
         <h2 ng-if="ctrl.selectedPost.comments.length == 0">
-        No comments
+        No comments: be the first one to inster a new comment!
         </h2>
-        <div>
-          Insert new comment<br />
-          <input type="text" placeholder="Insert a new comment" ng-model="ctrl.newMessage" />
-          <input type="button" ng-click="ctrl.addComment()" value="Add comment" />
-        </div>
+     
        <a ng-click="ctrl.selectedPost = null"> go back </a>
  </div>
