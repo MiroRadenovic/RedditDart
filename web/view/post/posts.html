@@ -1,22 +1,22 @@
   <div post>
-    <manage-post-component ng-if="postsController.selectedPost == null" post-controller="postsController" edit-post="postController.selectedPost">
+    <manage-post-component ng-if="ctrl.selectedPost == null" post-controller="ctrl" edit-post="ctrl.selectedPost">
      </manage-post-component>
-     <view-post-component selected-post="postsController.selectedPost">
+     <view-post-component selected-post="ctrl.selectedPost">
     </view-post-component>
     
-  <div class="holder_content" ng-if="postsController.selectedPost == null">
-        <section class="group1" ng-repeat="post in postController.posts">
+  <div class="holder_content" ng-if="ctrl.selectedPost == null">
+        <section class="group1" ng-repeat="post in ctrl.posts">
         <span class="postInfo">
            <h3 id="postHeader">{{post.title}} - score: {{post.score}}</h3>
            <p> {{post.description}}</p>
         </span> 
         <span class="postVote">
           <div class="voting">
-              <div class="upvote" ng-click="postsController.voteUp(post)">up</div>
-              <div class="downvote" ng-click="postsController.voteDown(post)">down</div>
+              <div class="upvote" ng-click="ctrl.voteUp(post)">up</div>
+              <div class="downvote" ng-click="ctrl.voteDown(post)">down</div>
           </div>
         </span>
-          <a class="photo_hover3" ng-click="postsController.selectedPost = post">
+          <a class="photo_hover3" ng-click="ctrl.selectedPost = post">
             <img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/>
           </a>
         </section>

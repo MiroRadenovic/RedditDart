@@ -6,13 +6,13 @@ import '../../domain/post.dart';
 
 @NgController(
     selector: '[post]',  // defines the tag used in the views
-    publishAs: 'postsController') // the name of the controller when accessing from html views
+    publishAs: 'ctrl') // the name of the controller when accessing from html views
 class PostsController{
   Post selectedPost;
   List<Post> posts;
   
   
-  PostController(){
+  PostsController(){
     posts = _loadPosts();
   }
   
