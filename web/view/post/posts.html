@@ -1,10 +1,10 @@
   <div post>
-    <manage-post-component ng-if="postController.selectedPost == null" post-controller="postController" edit-post="postController.selectedPost">
+    <manage-post-component ng-if="postsController.selectedPost == null" post-controller="postsController" edit-post="postController.selectedPost">
      </manage-post-component>
-     <view-post-component selected-post="postController.selectedPost">
+     <view-post-component selected-post="postsController.selectedPost">
     </view-post-component>
     
-  <div class="holder_content" ng-if="postController.selectedPost == null">
+  <div class="holder_content" ng-if="postsController.selectedPost == null">
         <section class="group1" ng-repeat="post in postController.posts">
         <span class="postInfo">
            <h3 id="postHeader">{{post.title}} - score: {{post.score}}</h3>
@@ -12,11 +12,11 @@
         </span> 
         <span class="postVote">
           <div class="voting">
-              <div class="upvote" ng-click="postController.voteUp(post)">up</div>
-              <div class="downvote" ng-click="postController.voteDown(post)">down</div>
+              <div class="upvote" ng-click="postsController.voteUp(post)">up</div>
+              <div class="downvote" ng-click="postsController.voteDown(post)">down</div>
           </div>
         </span>
-          <a class="photo_hover3" ng-click="postController.selectedPost = post">
+          <a class="photo_hover3" ng-click="postsController.selectedPost = post">
             <img src="{{post.imageUrl}}" width="240" height="214" alt="{{post.title}}"/>
           </a>
         </section>

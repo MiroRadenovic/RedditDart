@@ -1,8 +1,4 @@
-library new_post_component;
-
-import 'package:angular/angular.dart';
-import '../../controller/postController.dart';
-import '../../domain/post.dart';
+part of post_component;
 
 @NgComponent(
     selector: 'manage-post-component',
@@ -18,7 +14,7 @@ class NewPostComponent{
   String description;
   String imageUrl;
   
-  PostController postController; 
+  PostsController postController; 
   Post editPost;
 
   void addIt(){

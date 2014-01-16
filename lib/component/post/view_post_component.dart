@@ -1,7 +1,4 @@
-library view_post_component;
-
-import 'package:angular/angular.dart';
-import '../../domain/post.dart';
+part of post_component;
 
 @NgComponent(
     selector: 'view-post-component',

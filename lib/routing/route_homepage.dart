@@ -9,7 +9,7 @@ class RouteHomePageInitializer implements RouteInitializer {
       ..addRoute(
           name: 'default_view',
           defaultRoute: true,
-          enter: view('view/post/post_list.html')); 
+          enter: view('view/post/posts.html')); 
   }
 
 }
